@@ -1,0 +1,3 @@
+[submodule "remote_forkplayer"]
+	path = remote_forkplayer
+	url = https://github.com/alexkdpu/remote_forkplayer
