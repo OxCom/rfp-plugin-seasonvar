@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{567D53D6-8799-4F4A-B8A9-BCC1310C1B20}</ProjectGuid>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Seasonwar</RootNamespace>
+    <AssemblyName>Seasonwar</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Seasonvar.cs" />
+    <Compile Include="remote_forkplayer\PluginApi\Plugins\IHTTPClient.cs" />
+    <Compile Include="remote_forkplayer\PluginApi\Plugins\ILogger.cs" />
+    <Compile Include="remote_forkplayer\PluginApi\Plugins\IPlugin.cs" />
+    <Compile Include="remote_forkplayer\PluginApi\Plugins\IPluginContext.cs" />
+    <Compile Include="remote_forkplayer\PluginApi\Plugins\Item.cs" />
+    <Compile Include="remote_forkplayer\PluginApi\Plugins\Playlist.cs" />
+    <Compile Include="remote_forkplayer\PluginApi\Plugins\PluginAttribute.cs" />
+    <Compile Include="remote_forkplayer\PluginApi\Properties\AssemblyInfo.cs" />
+    <Compile Include="remote_forkplayer\RemoteFork\AppLogLevel.cs" />
+    <Compile Include="remote_forkplayer\RemoteFork\EmbedIOLogger.cs" />
+    <Compile Include="remote_forkplayer\RemoteFork\Forms\DlnaConfigurate.cs" />
+    <Compile Include="remote_forkplayer\RemoteFork\Forms\DlnaConfigurate.Designer.cs" />
+    <Compile Include="remote_forkplayer\RemoteFork\Forms\Main.cs" />
+    <Compile Include="remote_forkplayer\RemoteFork\Forms\Main.Designer.cs" />
+    <Compile Include="remote_forkplayer\RemoteFork\Forms\PlayUrl.cs" />
+    <Compile Include="remote_forkplayer\RemoteFork\Forms\PlayUrl.Designer.cs" />
+    <Compile Include="remote_forkplayer\RemoteFork\Forms\PluginsConfigurate.cs" />
+    <Compile Include="remote_forkplayer\RemoteFork\Forms\PluginsConfigurate.Designer.cs" />
+    <Compile Include="remote_forkplayer\RemoteFork\Network\HttpUtility.cs" />
+    <Compile Include="remote_forkplayer\RemoteFork\Plugins\PluginContext.cs" />
+    <Compile Include="remote_forkplayer\RemoteFork\Plugins\PluginInstance.cs" />
+    <Compile Include="remote_forkplayer\RemoteFork\Plugins\PluginManager.cs" />
+    <Compile Include="remote_forkplayer\RemoteFork\Program.cs" />
+    <Compile Include="remote_forkplayer\RemoteFork\Properties\AssemblyInfo.cs" />
+    <Compile Include="remote_forkplayer\RemoteFork\Properties\Settings.Designer.cs" />
+    <Compile Include="remote_forkplayer\RemoteFork\Requestes\BaseRequestHandler.cs" />
+    <Compile Include="remote_forkplayer\RemoteFork\Requestes\DlnaDirectoryRequestHandler.cs" />
+    <Compile Include="remote_forkplayer\RemoteFork\Requestes\DlnaFileRequestHandler.cs" />
+    <Compile Include="remote_forkplayer\RemoteFork\Requestes\IRequestHandler.cs" />
+    <Compile Include="remote_forkplayer\RemoteFork\Requestes\ParseLinkRequestHandler.cs" />
+    <Compile Include="remote_forkplayer\RemoteFork\Requestes\PluginRequestHandler.cs" />
+    <Compile Include="remote_forkplayer\RemoteFork\Requestes\RootRequestHandler.cs" />
+    <Compile Include="remote_forkplayer\RemoteFork\Requestes\TestRequestHandler.cs" />
+    <Compile Include="remote_forkplayer\RemoteFork\Requestes\UserUrlsRequestHandler.cs" />
+    <Compile Include="remote_forkplayer\RemoteFork\Server\HttpMethod.cs" />
+    <Compile Include="remote_forkplayer\RemoteFork\Server\HttpServer.cs" />
+    <Compile Include="remote_forkplayer\RemoteFork\Server\HttpStatusCode.cs" />
+    <Compile Include="remote_forkplayer\RemoteFork\Server\RequestDispatcher.cs" />
+    <Compile Include="remote_forkplayer\RemoteFork\Server\ResponseSerializer.cs" />
+    <Compile Include="remote_forkplayer\RemoteFork\Tools.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include=".gitmodules" />
+    <Content Include="LICENSE" />
+    <Content Include="README.md" />
+    <Content Include="remote_forkplayer\.git" />
+    <Content Include="remote_forkplayer\.gitignore" />
+    <Content Include="remote_forkplayer\packages\Common.Logging.3.3.1\Common.Logging.3.3.1.nupkg" />
+    <Content Include="remote_forkplayer\packages\Common.Logging.3.3.1\lib\net35\Common.Logging.dll" />
+    <Content Include="remote_forkplayer\packages\Common.Logging.3.3.1\lib\net35\Common.Logging.pdb" />
+    <Content Include="remote_forkplayer\packages\Common.Logging.3.3.1\lib\net35\Common.Logging.xml" />
+    <Content Include="remote_forkplayer\packages\Common.Logging.3.3.1\lib\net40\Common.Logging.dll" />
+    <Content Include="remote_forkplayer\packages\Common.Logging.3.3.1\lib\net40\Common.Logging.pdb" />
+    <Content Include="remote_forkplayer\packages\Common.Logging.3.3.1\lib\net40\Common.Logging.xml" />
+    <Content Include="remote_forkplayer\packages\Common.Logging.Core.3.3.1\Common.Logging.Core.3.3.1.nupkg" />
+    <Content Include="remote_forkplayer\packages\Common.Logging.Core.3.3.1\lib\net35\Common.Logging.Core.dll" />
+    <Content Include="remote_forkplayer\packages\Common.Logging.Core.3.3.1\lib\net35\Common.Logging.Core.pdb" />
+    <Content Include="remote_forkplayer\packages\Common.Logging.Core.3.3.1\lib\net35\Common.Logging.Core.xml" />
+    <Content Include="remote_forkplayer\packages\Common.Logging.Core.3.3.1\lib\net40\Common.Logging.Core.dll" />
+    <Content Include="remote_forkplayer\packages\Common.Logging.Core.3.3.1\lib\net40\Common.Logging.Core.pdb" />
+    <Content Include="remote_forkplayer\packages\Common.Logging.Core.3.3.1\lib\net40\Common.Logging.Core.xml" />
+    <Content Include="remote_forkplayer\packages\Common.Logging.Core.3.3.1\lib\portable-win+net40+sl40+wp7\Common.Logging.Core.dll" />
+    <Content Include="remote_forkplayer\packages\Common.Logging.Core.3.3.1\lib\portable-win+net40+sl40+wp7\Common.Logging.Core.pdb" />
+    <Content Include="remote_forkplayer\packages\Common.Logging.Core.3.3.1\lib\portable-win+net40+sl40+wp7\Common.Logging.Core.XML" />
+    <Content Include="remote_forkplayer\packages\Common.Logging.NLog41.3.3.1\Common.Logging.NLog41.3.3.1.nupkg" />
+    <Content Include="remote_forkplayer\packages\Common.Logging.NLog41.3.3.1\lib\net40\Common.Logging.NLog41.dll" />
+    <Content Include="remote_forkplayer\packages\Common.Logging.NLog41.3.3.1\lib\net40\Common.Logging.NLog41.pdb" />
+    <Content Include="remote_forkplayer\packages\Common.Logging.NLog41.3.3.1\lib\net40\Common.Logging.NLog41.xml" />
+    <Content Include="remote_forkplayer\packages\EmbedIO.1.2.4\EmbedIO.1.2.4.nupkg" />
+    <Content Include="remote_forkplayer\packages\EmbedIO.1.2.4\lib\net452\Unosquare.Labs.EmbedIO.dll" />
+    <Content Include="remote_forkplayer\packages\EmbedIO.1.2.4\lib\net452\Unosquare.Labs.EmbedIO.pdb" />
+    <Content Include="remote_forkplayer\packages\EmbedIO.1.2.4\lib\net452\Unosquare.Labs.EmbedIO.xml" />
+    <Content Include="remote_forkplayer\packages\EmbedIO.1.2.4\lib\net46\Unosquare.Labs.EmbedIO.dll" />
+    <Content Include="remote_forkplayer\packages\EmbedIO.1.2.4\lib\net46\Unosquare.Labs.EmbedIO.pdb" />
+    <Content Include="remote_forkplayer\packages\EmbedIO.1.2.4\lib\net46\Unosquare.Labs.EmbedIO.xml" />
+    <Content Include="remote_forkplayer\packages\EmbedIO.1.2.4\lib\netcoreapp1.0\Unosquare.Labs.EmbedIO.deps.json" />
+    <Content Include="remote_forkplayer\packages\EmbedIO.1.2.4\lib\netcoreapp1.0\Unosquare.Labs.EmbedIO.dll" />
+    <Content Include="remote_forkplayer\packages\EmbedIO.1.2.4\lib\netcoreapp1.0\Unosquare.Labs.EmbedIO.pdb" />
+    <Content Include="remote_forkplayer\packages\EmbedIO.1.2.4\lib\netcoreapp1.0\Unosquare.Labs.EmbedIO.xml" />
+    <Content Include="remote_forkplayer\packages\EmbedIO.1.2.4\lib\netstandard1.6\Unosquare.Labs.EmbedIO.deps.json" />
+    <Content Include="remote_forkplayer\packages\EmbedIO.1.2.4\lib\netstandard1.6\Unosquare.Labs.EmbedIO.dll" />
+    <Content Include="remote_forkplayer\packages\EmbedIO.1.2.4\lib\netstandard1.6\Unosquare.Labs.EmbedIO.pdb" />
+    <Content Include="remote_forkplayer\packages\EmbedIO.1.2.4\lib\netstandard1.6\Unosquare.Labs.EmbedIO.xml" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\net40\System.IO.dll" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\net40\System.IO.xml" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Runtime.dll" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Runtime.xml" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Threading.Tasks.dll" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Threading.Tasks.xml" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8+wp71+wpa81\System.IO.dll" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8+wp71+wpa81\System.IO.xml" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8+wp71+wpa81\System.Runtime.dll" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8+wp71+wpa81\System.Runtime.xml" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8+wp71+wpa81\System.Threading.Tasks.dll" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8+wp71+wpa81\System.Threading.Tasks.xml" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8+wp8+wpa81\System.IO.dll" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8+wp8+wpa81\System.IO.xml" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8+wp8+wpa81\System.Runtime.dll" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8+wp8+wpa81\System.Runtime.xml" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8+wp8+wpa81\System.Threading.Tasks.dll" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8+wp8+wpa81\System.Threading.Tasks.xml" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8\System.IO.dll" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8\System.IO.xml" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8\System.Runtime.dll" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8\System.Runtime.xml" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8\System.Threading.Tasks.dll" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl4+win8\System.Threading.Tasks.xml" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl5+win8+wp8+wpa81\System.IO.dll" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl5+win8+wp8+wpa81\System.IO.xml" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl5+win8+wp8+wpa81\System.Runtime.dll" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl5+win8+wp8+wpa81\System.Runtime.xml" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl5+win8+wp8+wpa81\System.Threading.Tasks.dll" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+sl5+win8+wp8+wpa81\System.Threading.Tasks.xml" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+win8+wp8+wpa81\System.IO.dll" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+win8+wp8+wpa81\System.IO.xml" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+win8+wp8+wpa81\System.Runtime.dll" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+win8+wp8+wpa81\System.Runtime.xml" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+win8+wp8+wpa81\System.Threading.Tasks.dll" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+win8+wp8+wpa81\System.Threading.Tasks.xml" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+win8\System.IO.dll" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+win8\System.IO.xml" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+win8\System.Runtime.dll" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+win8\System.Runtime.xml" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+win8\System.Threading.Tasks.dll" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\portable-net40+win8\System.Threading.Tasks.xml" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\sl4-windowsphone71\System.IO.dll" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\sl4-windowsphone71\System.IO.xml" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\sl4-windowsphone71\System.Runtime.dll" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\sl4-windowsphone71\System.Runtime.xml" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\sl4-windowsphone71\System.Threading.Tasks.dll" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\sl4-windowsphone71\System.Threading.Tasks.xml" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\sl4\System.IO.dll" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\sl4\System.IO.xml" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\sl4\System.Runtime.dll" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\sl4\System.Runtime.xml" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\sl4\System.Threading.Tasks.dll" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\sl4\System.Threading.Tasks.xml" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\sl5\System.IO.dll" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\sl5\System.IO.xml" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\sl5\System.Runtime.dll" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\sl5\System.Runtime.xml" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\sl5\System.Threading.Tasks.dll" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\lib\sl5\System.Threading.Tasks.xml" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\License-Stable.rtf" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.1.1.10\Microsoft.Bcl.1.1.10.nupkg" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" />
+    <Content Include="remote_forkplayer\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.Tasks.dll" />
+    <Content Include="remote_forkplayer\PluginApi\bin\Debug\PluginApi.dll" />
+    <Content Include="remote_forkplayer\PluginApi\bin\Debug\PluginApi.pdb" />
+    <Content Include="remote_forkplayer\PluginApi\bin\Release\PluginApi.dll" />
+    <Content Include="remote_forkplayer\PluginApi\bin\Release\PluginApi.pdb" />
+    <Content Include="remote_forkplayer\PluginApi\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="remote_forkplayer\PluginApi\obj\Debug\PluginApi.csproj.FileListAbsolute.txt" />
+    <Content Include="remote_forkplayer\PluginApi\obj\Debug\PluginApi.csprojResolveAssemblyReference.cache" />
+    <Content Include="remote_forkplayer\PluginApi\obj\Debug\PluginApi.dll" />
+    <Content Include="remote_forkplayer\PluginApi\obj\Debug\PluginApi.pdb" />
+    <Content Include="remote_forkplayer\PluginApi\obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="remote_forkplayer\PluginApi\obj\Release\PluginApi.csproj.FileListAbsolute.txt" />
+    <Content Include="remote_forkplayer\PluginApi\obj\Release\PluginApi.dll" />
+    <Content Include="remote_forkplayer\PluginApi\obj\Release\PluginApi.pdb" />
+    <Content Include="remote_forkplayer\PluginApi\packages.config" />
+    <Content Include="remote_forkplayer\PluginApi\PluginApi.csproj" />
+    <Content Include="remote_forkplayer\RemoteFork.sln" />
+    <Content Include="remote_forkplayer\RemoteFork.userprefs" />
+    <Content Include="remote_forkplayer\RemoteFork\app.config" />
+    <Content Include="remote_forkplayer\RemoteFork\Forms\DlnaConfigurate.resx" />
+    <Content Include="remote_forkplayer\RemoteFork\Forms\Main.resx" />
+    <Content Include="remote_forkplayer\RemoteFork\Forms\PlayUrl.resx" />
+    <Content Include="remote_forkplayer\RemoteFork\Forms\PluginsConfigurate.resx" />
+    <Content Include="remote_forkplayer\RemoteFork\LICENSE.txt" />
+    <Content Include="remote_forkplayer\RemoteFork\Logo.ico" />
+    <Content Include="remote_forkplayer\RemoteFork\packages.config" />
+    <Content Include="remote_forkplayer\RemoteFork\Properties\Settings.settings" />
+    <Content Include="remote_forkplayer\RemoteFork\RemoteFork.csproj" />
+    <Content Include="remote_forkplayer\RemoteFork\RemoteFork.csproj.user" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
